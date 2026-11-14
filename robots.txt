@@ -1,0 +1,9 @@
+# Demo site: keep it out of search results.
+# Before launching the real site, replace this file with:
+#   User-agent: *
+#   Allow: /
+#   Disallow: /pages/catalog.html
+#   Sitemap: https://YOUR-DOMAIN/sitemap.xml
+
+User-agent: *
+Disallow: /

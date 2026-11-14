@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Demo sitemap. robots.txt blocks crawling and does not point here, so
+  search engines ignore this file for now. Before launch, replace
+  https://example.com with the real lowercase domain and add a Sitemap
+  line to robots.txt.
+  Product detail pages and pages/catalog.html are left out on purpose (noindex).
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://example.com/</loc></url>
+  <url><loc>https://example.com/pages/about.html</loc></url>
+  <url><loc>https://example.com/pages/services.html</loc></url>
+  <url><loc>https://example.com/pages/products.html</loc></url>
+  <url><loc>https://example.com/pages/gallery.html</loc></url>
+  <url><loc>https://example.com/pages/contact.html</loc></url>
+</urlset>

@@ -1,0 +1,801 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      مانیرو پاسارگاد | طراحی و ساخت دکل‌های انتقال برق و تجهیزات صنعتی
+    </title>
+    <meta
+      name="description"
+      content="مانیرو پاسارگاد در طراحی، تولید و اجرای دکل‌های انتقال برق و تجهیزات صنعتی فعالیت می‌کند و راهکارهایی پایدار برای پروژه‌های زیرساختی ارائه می‌دهد."
+    />
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon/favicon.ico" sizes="any" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <meta name="theme-color" content="#0ea5e9" />
+
+    <!-- Canonical — replace https://your-domain.com with the real domain before launch -->
+    <link rel="canonical" href="https://manirou.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:site_name" content="مانیرو پاسارگاد" />
+    <meta
+      property="og:title"
+      content="مانیرو پاسارگاد | طراحی و ساخت دکل‌های انتقال برق و تجهیزات صنعتی"
+    />
+    <meta
+      property="og:description"
+      content="مانیرو پاسارگاد در طراحی، تولید و اجرای دکل‌های انتقال برق و تجهیزات صنعتی فعالیت می‌کند و راهکارهایی پایدار برای پروژه‌های زیرساختی ارائه می‌دهد."
+    />
+    <meta
+      property="og:image"
+      content="https://your-domain.com/assets/images/logo/logo.png"
+    />
+    <meta property="og:url" content="https://manirou.com/" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="مانیرو پاسارگاد | طراحی و ساخت دکل‌های انتقال برق و تجهیزات صنعتی"
+    />
+    <meta
+      name="twitter:description"
+      content="مانیرو پاسارگاد در طراحی، تولید و اجرای دکل‌های انتقال برق و تجهیزات صنعتی فعالیت می‌کند و راهکارهایی پایدار برای پروژه‌های زیرساختی ارائه می‌دهد."
+    />
+    <meta
+      name="twitter:image"
+      content="https://your-domain.com/assets/images/logo/logo.png"
+    />
+
+    <!-- Preload the LCP image (hero photo) so the browser can start
+         fetching it right away instead of discovering it later via CSS -->
+    <link
+      rel="preload"
+      as="image"
+      href="assets/images/hero/hero-transmission-towers-1600.jpg"
+      imagesrcset="
+        assets/images/hero/hero-transmission-towers-900.webp   900w,
+        assets/images/hero/hero-transmission-towers-1600.webp 1600w
+      "
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
+
+    <!-- Critical, above-the-fold CSS: loaded blocking -->
+    <link rel="stylesheet" href="./css/base/font.css" />
+    <link rel="stylesheet" href="css/base/style.css" />
+    <link rel="stylesheet" href="css/layout/header.css" />
+    <link rel="stylesheet" href="css/base/responsive.css" />
+
+    <!-- Below-the-fold CSS: loaded without blocking first render -->
+    <link
+      rel="preload"
+      as="style"
+      href="css/pages/home/about.css"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      as="style"
+      href="css/pages/home/services.css"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      as="style"
+      href="css/pages/home/stats.css"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      as="style"
+      href="css/layout/footer.css"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      as="style"
+      href="css/layout/back-to-top.css"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="css/pages/home/about.css" />
+      <link rel="stylesheet" href="css/pages/home/services.css" />
+      <link rel="stylesheet" href="css/pages/home/stats.css" />
+      <link rel="stylesheet" href="css/layout/footer.css" />
+      <link rel="stylesheet" href="css/layout/back-to-top.css" />
+    </noscript>
+
+    <style>
+      * {
+        font-family: Vazirmatn, sans-serif;
+      }
+    </style>
+
+    <!-- جلوگیری از فلش تم: قبل از رندر اولیه اعمال می‌شود -->
+    <script>
+      (function () {
+        // تم پیش‌فرض همیشه روشن است — تنظیم تاریک/روشن سیستم کاربر
+        // نادیده گرفته می‌شود. فقط زمانی تاریک می‌شود که خود کاربر
+        // با دکمهٔ تغییر تم آن را انتخاب کرده باشد (ذخیره در localStorage).
+        var saved = localStorage.getItem("maniro-theme");
+        var theme = saved === "dark" ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">رفتن به محتوای اصلی</a>
+
+    <!-- ============ هدر: نوار ناوبری ============ -->
+    <header class="site-header" id="site-header">
+      <div class="navbar container">
+        <a href="index.html" class="brand" aria-label="مانیرو — صفحه اصلی">
+          <img
+            src="assets/images/logo/logo.png"
+            alt="مانیرو پاسارگاد"
+            class="brand-logo"
+            width="34"
+            height="35"
+            decoding="async"
+          />
+          <span class="brand-name">مانیرو</span>
+        </a>
+
+        <nav class="nav-links" id="nav-links" aria-label="ناوبری اصلی">
+          <a href="index.html" class="nav-link is-active">خانه</a>
+          <a href="pages/about.html" class="nav-link">درباره ما</a>
+          <a href="pages/services.html" class="nav-link">خدمات</a>
+          <a href="pages/gallery.html" class="nav-link">پروژه‌ها</a>
+          <a href="pages/products.html" class="nav-link">محصولات</a>
+          <a href="pages/contact.html" class="nav-link">تماس با ما</a>
+        </nav>
+
+        <div class="navbar-actions">
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            type="button"
+            aria-label="تغییر حالت تیره/روشن"
+            aria-pressed="false"
+          >
+            <svg
+              class="icon icon-sun"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+              />
+            </svg>
+            <svg
+              class="icon icon-moon"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
+            </svg>
+          </button>
+
+          <button
+            class="menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-label="باز کردن منو"
+            aria-expanded="false"
+            aria-controls="nav-links"
+          >
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- ============ هیرو ============ -->
+      <section class="hero" id="hero">
+        <img
+          class="hero-bg-img"
+          src="assets/images/hero/hero-transmission-towers-1600.jpg"
+          srcset="
+            assets/images/hero/hero-transmission-towers-900.webp   900w,
+            assets/images/hero/hero-transmission-towers-1600.webp 1600w
+          "
+          sizes="100vw"
+          width="1600"
+          height="900"
+          alt=""
+          fetchpriority="high"
+          decoding="async"
+        />
+        <div class="hero-inner container">
+          <div class="hero-content">
+            <h1 class="hero-title">شرکت مهندسی انتقال نیرو پاسارگاد</h1>
+            <p class="hero-text">
+                طراحی، تهیه تجهیزات و اجرای خطوط انتقال نیرو
+            </p>
+            <div class="hero-actions">
+              <a href="pages/products.html" class="btn btn-primary"
+                >مشاهده محصولات</a
+              >
+              <a href="pages/about.html" class="btn btn-secondary"
+                >درباره شرکت</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ درباره مانیرو ============ -->
+      <section class="about" id="about">
+        <div class="about-inner container">
+          <div class="about-content reveal">
+            <p class="about-eyebrow">درباره شرکت</p>
+            <h2 class="about-title">درباره مانیرو</h2>
+            <p class="about-text">
+              مانیرو در زمینه تهیه کلیه تجهیزات و اجرای خطوط انتقال نیرو و پست
+              های فشار قوی فعالیت می کند.
+            </p>
+
+            <div class="about-features">
+              <div class="feature-card reveal" style="--reveal-delay: 0s">
+                <span class="feature-card-glow" aria-hidden="true"></span>
+                <span class="feature-icon" aria-hidden="true">
+                  <img
+                    src="assets/icons/stockholm/48x48/Electric/Highvoltage.png"
+                    alt=""
+                    width="48"
+                    height="48"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </span>
+                <h3 class="feature-title">دکل‌های فشار قوی برق</h3>
+                <p class="feature-text">تهیه دکل های مشبک و تلسکوپی</p>
+              </div>
+
+              <div class="feature-card reveal" style="--reveal-delay: 0.08s">
+                <span class="feature-card-glow" aria-hidden="true"></span>
+                <span class="feature-icon" aria-hidden="true">
+                  <img
+                    src="assets/icons/stockholm/48x48/Electric/Socket-eu.png"
+                    alt=""
+                    width="48"
+                    height="48"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </span>
+                <h3 class="feature-title">کابل‌های فشار قوی</h3>
+                <p class="feature-text">
+                  تهیه انواع کابل فشار متوسط و فشار قوی.
+                </p>
+              </div>
+
+              <div class="feature-card reveal" style="--reveal-delay: 0.16s">
+                <span class="feature-card-glow" aria-hidden="true"></span>
+                <span class="feature-icon" aria-hidden="true">
+                  <img
+                    src="assets/icons/stockholm/48x48/Tools/Screwdriver.png"
+                    alt=""
+                    width="48"
+                    height="48"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </span>
+                <h3 class="feature-title">نصب و راه‌اندازی</h3>
+                <p class="feature-text">
+                  اجرا و بهره برداری خطوط انتقال نیرو به صورت هوایی و زمینی.
+                </p>
+              </div>
+
+              <div class="feature-card reveal" style="--reveal-delay: 0.24s">
+                <span class="feature-card-glow" aria-hidden="true"></span>
+                <span class="feature-icon" aria-hidden="true">
+                  <img
+                    src="assets/icons/stockholm/48x48/Home/Box.png"
+                    alt=""
+                    width="48"
+                    height="48"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </span>
+                <h3 class="feature-title">تجهیزات کابل کشی</h3>
+                <p class="feature-text">ساخت کلیه تجهیزات کابل کشی.</p>
+              </div>
+            </div>
+
+            <a href="pages/about.html" class="btn btn-secondary about-cta"
+              >بیشتر دربارهٔ شرکت مانیرو پاسارگاد</a
+            >
+          </div>
+
+          <div class="about-visual reveal" style="--reveal-delay: 0.1s">
+            <img
+              src="assets/images/hero/about-tower-silhouette-1000.jpg"
+              srcset="
+                assets/images/hero/about-tower-silhouette-600.webp   600w,
+                assets/images/hero/about-tower-silhouette-1000.webp 1000w
+              "
+              sizes="(max-width: 960px) 420px, 500px"
+              alt="دکل انتقال نیرو"
+              class="about-image"
+              width="1000"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ خدمات ما ============ -->
+      <section class="services" id="services">
+        <div class="services-inner container">
+          <div class="services-header reveal">
+            <h2 class="services-title">خدمات ما</h2>
+            <p class="services-subtitle">
+                مجموعه‌ای از خدمات مهندسی و اجرایی برای پروژه‌های برق صنعتی و دکل‌های انتقال برق.
+            </p>
+          </div>
+
+          <div class="services-slider" id="servicesSlider">
+            <div class="services-track" id="servicesTrack">
+              <article class="service-card reveal" style="--reveal-delay: 0s">
+                <span class="service-icon" aria-hidden="true">
+                  <img
+                    src="assets/icons/stockholm/48x48/Design/Pen%26ruller.png"
+                    alt=""
+                    width="48"
+                    height="48"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </span>
+                <h3 class="service-title">طراحی و مهندسی</h3>
+                <p class="service-text">طراحی خطوط انتقال نیرو.</p>
+                <a href="pages/services.html" class="service-link">
+                  بیشتر دربارهٔ طراحی و مهندسی
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M14 5 21 12 14 19M21 12H3" />
+                  </svg>
+                </a>
+              </article>
+
+              <article
+                class="service-card reveal"
+                style="--reveal-delay: 0.06s"
+              >
+                <span class="service-icon" aria-hidden="true">
+                  <img
+                    src="assets/icons/stockholm/48x48/Tools/Screwdriver.png"
+                    alt=""
+                    width="48"
+                    height="48"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </span>
+                <h3 class="service-title">نصب و راه‌اندازی</h3>
+                <p class="service-text">
+                  اجرا و بهره‌برداری از کلیه خطوط انتقال نیرو برق به صورت هوایی
+                  و زمینی.
+                </p>
+                <a href="pages/services.html" class="service-link">
+                  بیشتر دربارهٔ نصب و راه‌اندازی
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M14 5 21 12 14 19M21 12H3" />
+                  </svg>
+                </a>
+              </article>
+
+              <article
+                class="service-card reveal"
+                style="--reveal-delay: 0.12s"
+              >
+                <span class="service-icon" aria-hidden="true">
+                  <img
+                    src="assets/icons/stockholm/48x48/Home/Box.png"
+                    alt=""
+                    width="48"
+                    height="48"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </span>
+                <h3 class="service-title">تأمین تجهیزات</h3>
+                <p class="service-text">تامین کلیه تجهیزات تخصصی صنعت برق.</p>
+                <a href="pages/services.html" class="service-link">
+                  بیشتر دربارهٔ تأمین تجهیزات
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M14 5 21 12 14 19M21 12H3" />
+                  </svg>
+                </a>
+              </article>
+
+              <article
+                class="service-card reveal"
+                style="--reveal-delay: 0.18s"
+              >
+                <span class="service-icon" aria-hidden="true">
+                  <img
+                    src="assets/icons/stockholm/48x48/Code/Question-circle.png"
+                    alt=""
+                    width="48"
+                    height="48"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </span>
+                <h3 class="service-title">مشاوره فنی</h3>
+                <p class="service-text">
+                    ارائه راهکار های تخصصی جهت اجرای بهینه خطوط انتقال نیرو.
+                </p>
+                <a href="pages/services.html" class="service-link">
+                  بیشتر دربارهٔ مشاوره فنی
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M14 5 21 12 14 19M21 12H3" />
+                  </svg>
+                </a>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ آمار و ارقام ============ -->
+      <section class="stats" id="stats">
+        <div class="stats-inner container">
+          <h2 class="stats-title">اعداد ما</h2>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <span class="stat-icon" aria-hidden="true">
+                <img
+                  src="assets/icons/stockholm/48x48/Home/Building.png"
+                  alt=""
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </span>
+              <span class="stat-number">60+</span>
+              <span class="stat-label">پروژه تکمیل‌شده</span>
+            </div>
+
+            <div class="stat-card">
+              <span class="stat-icon" aria-hidden="true">
+                <img
+                  src="assets/icons/stockholm/48x48/Code/Loading.png"
+                  alt=""
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </span>
+              <span class="stat-number">6+</span>
+              <span class="stat-label">پروژه‌های فعال</span>
+            </div>
+
+            <div class="stat-card">
+              <span class="stat-icon" aria-hidden="true">
+                <img
+                  src="assets/icons/stockholm/48x48/General/Shield-check.png"
+                  alt=""
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </span>
+              <span class="stat-number">5+</span>
+              <span class="stat-label">گواهینامه ها</span>
+            </div>
+
+            <div class="stat-card">
+              <span class="stat-icon" aria-hidden="true">
+                <img
+                  src="assets/icons/stockholm/48x48/Home/Clock.png"
+                  alt=""
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </span>
+              <span class="stat-number">10+</span>
+              <span class="stat-label">سال سابقه فعالیت</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ فوتر ============ -->
+    <footer class="site-footer">
+      <div class="footer-inner container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a
+              href="index.html"
+              class="brand footer-logo"
+              aria-label="مانیرو — صفحه اصلی"
+            >
+              <img
+                src="assets/images/logo/logo.png"
+                alt="مانیرو پاسارگاد"
+                class="brand-logo"
+                width="34"
+                height="35"
+                decoding="async"
+              />
+              <span class="brand-name">مانیرو</span>
+            </a>
+            <p class="footer-text">
+              مانیرو در زمینه تهیه کلیه تجهیزات و اجرای خطوط انتقال نیرو و پست
+              های فشار قوی فعالیت می کند.
+            </p>
+
+            <div class="footer-social">
+              <a href="#" class="social-link" aria-label="تلگرام">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M21 4 2.5 11.5 9 13.5m12-9.5L16 20l-7-6.5m12-9.5L9 13.5m0 0v6.5"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="اینستاگرام">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1" />
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="لینکدین">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-13h4v1.3A5.98 5.98 0 0 1 16 8Z"
+                  />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="واتساپ">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M4 20l1.4-4.2A8 8 0 1 1 9 18.6L4 20Z" />
+                  <path d="M9 10c0 2.5 2.5 5 5 5" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3 class="footer-heading">لینک‌های سریع</h3>
+            <nav class="footer-nav" aria-label="لینک‌های سریع">
+              <a href="index.html" class="footer-link">خانه</a>
+              <a href="pages/about.html" class="footer-link">درباره ما</a>
+              <a href="pages/services.html" class="footer-link">خدمات</a>
+              <a href="pages/products.html" class="footer-link">محصولات</a>
+              <a href="pages/contact.html" class="footer-link">تماس با ما</a>
+            </nav>
+          </div>
+
+          <div class="footer-contact">
+            <h3 class="footer-heading">تماس با ما</h3>
+            <ul class="footer-contact-list">
+              <li>
+                <img
+                  src="assets/icons/stockholm/48x48/Map/Marker%231.png"
+                  alt=""
+                  width="48"
+                  height="48"
+                  aria-hidden="true"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span
+                  >تهران، خیابان نمونه، پلاک ۰۰، واحد ۰۰</span
+                >
+              </li>
+              <li>
+                <img
+                  src="assets/icons/stockholm/48x48/Home/Mailbox.png"
+                  alt=""
+                  width="48"
+                  height="48"
+                  aria-hidden="true"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span>کدپستی: ۰۰۰۰۰۰۰۰۰۰</span>
+              </li>
+              <li>
+                <img
+                  src="assets/icons/stockholm/48x48/Communication/Call.png"
+                  alt=""
+                  width="48"
+                  height="48"
+                  aria-hidden="true"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span dir="ltr">021-00000000</span>
+              </li>
+              <li>
+                <img
+                  src="assets/icons/stockholm/48x48/Devices/Printer.png"
+                  alt=""
+                  width="48"
+                  height="48"
+                  aria-hidden="true"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span dir="ltr">021-00000001 :فکس</span>
+              </li>
+              <li>
+                <img
+                  src="assets/icons/stockholm/48x48/Communication/Mail.png"
+                  alt=""
+                  width="48"
+                  height="48"
+                  aria-hidden="true"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span dir="ltr">info@example.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            © ۲۰۲۶ مانیرو انجینیرینگ | تمامی حقوق این وب‌سایت محفوظ است
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ============ دکمه بازگشت به بالا ============ -->
+    <button
+      type="button"
+      id="backToTop"
+      class="back-to-top"
+      aria-label="بازگشت به بالای صفحه"
+    >
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M12 19V5" />
+        <path d="M5 12l7-7 7 7" />
+      </svg>
+    </button>
+
+    <script src="js/base/smooth-scroll.js"></script>
+    <script src="js/base/back-to-top.js"></script>
+    <script src="js/base/menu.js"></script>
+    <script src="js/base/infinity-slider.js"></script>
+    <script src="js/base/scroll-reveal.js"></script>
+  </body>
+</html>

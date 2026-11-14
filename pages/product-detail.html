@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="page-title">مشخصات محصول | مانیرو پاسارگاد</title>
+    <meta
+      name="description"
+      content="مشخصات فنی و کاتالوگ محصولات مانیرو پاسارگاد؛ دکل‌های انتقال برق و تجهیزات صنعتی."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/favicon/favicon.ico" sizes="any" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+    <meta name="theme-color" content="#0ea5e9" />
+
+    <!-- این صفحه یک تمپلیت مشترک برای همهٔ محصولات است؛ محتوا از طریق
+         JavaScript (js/pages/product-detail/product-detail.js) بر اساس
+         پارامتر ?slug= از فایل assets/data/products.json خوانده و رندر
+         می‌شود. صفحات نتیجه بنابراین ایندکس نمی‌شوند تا با محتوای پویا
+         تداخل SEO ایجاد نشود؛ در فاز اتصال به Django این تگ حذف/بازبینی
+         خواهد شد. -->
+    <meta name="robots" content="noindex, follow" />
+
+    <link rel="stylesheet" href="../css/base/font.css" />
+    <link rel="stylesheet" href="../css/base/style.css" />
+    <link rel="stylesheet" href="../css/layout/header.css" />
+    <link rel="stylesheet" href="../css/pages/product-detail/product-detail.css" />
+    <link rel="stylesheet" href="../css/base/reveal.css" />
+    <link rel="stylesheet" href="../css/base/responsive.css" />
+    <link rel="stylesheet" href="../css/layout/footer.css" />
+    <link rel="stylesheet" href="../css/layout/back-to-top.css" />
+
+    <style>
+      * {
+        font-family: Vazirmatn, sans-serif;
+      }
+    </style>
+
+    <script>
+      (function () {
+        // تم پیش‌فرض همیشه روشن است — تنظیم تاریک/روشن سیستم کاربر
+        // نادیده گرفته می‌شود. فقط زمانی تاریک می‌شود که خود کاربر
+        // با دکمهٔ تغییر تم آن را انتخاب کرده باشد (ذخیره در localStorage).
+        var saved = localStorage.getItem("maniro-theme");
+        var theme = saved === "dark" ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">رفتن به محتوای اصلی</a>
+
+    <header class="site-header" id="site-header">
+      <div class="navbar container">
+        <a href="../index.html" class="brand" aria-label="مانیرو — صفحه اصلی">
+          <img
+            src="../assets/images/logo/logo.png"
+            alt="مانیرو پاسارگاد"
+            class="brand-logo"
+            width="34"
+            height="35"
+            decoding="async"
+          />
+          <span class="brand-name">مانیرو</span>
+        </a>
+
+        <nav class="nav-links" id="nav-links" aria-label="ناوبری اصلی">
+          <a href="../index.html" class="nav-link">خانه</a>
+          <a href="about.html" class="nav-link">درباره ما</a>
+          <a href="services.html" class="nav-link">خدمات</a>
+          <a href="gallery.html" class="nav-link">پروژه‌ها</a>
+          <a href="products.html" class="nav-link is-active">محصولات</a>
+          <a href="contact.html" class="nav-link">تماس با ما</a>
+        </nav>
+
+        <div class="navbar-actions">
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            type="button"
+            aria-label="تغییر حالت تیره/روشن"
+            aria-pressed="false"
+          >
+            <svg
+              class="icon icon-sun"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+              />
+            </svg>
+            <svg
+              class="icon icon-moon"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
+            </svg>
+          </button>
+
+          <button
+            class="menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-label="باز کردن منو"
+            aria-expanded="false"
+            aria-controls="nav-links"
+          >
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- ============ نوار مسیر (Breadcrumb) ============
+           DJANGO HAND-OFF: در نسخهٔ نهایی، «محصولات» و نام محصول با
+           {% url 'products:list' %} و {{ product.name }} جایگزین می‌شوند. -->
+      <nav class="product-breadcrumb-bar" aria-label="مسیر صفحه">
+        <div class="container product-breadcrumb-inner">
+          <a href="../index.html">خانه</a>
+          <span class="product-breadcrumb-sep" aria-hidden="true">/</span>
+          <a href="products.html">محصولات</a>
+          <span class="product-breadcrumb-sep" aria-hidden="true">/</span>
+          <span
+            class="product-breadcrumb-current"
+            id="product-breadcrumb-current"
+            aria-current="page"
+            >در حال بارگذاری…</span
+          >
+        </div>
+      </nav>
+
+      <!-- ============ حالت «محصول یافت نشد» ============
+           وقتی slug در URL نامعتبر باشد یا در products.json پیدا نشود. -->
+      <section
+        class="product-not-found"
+        id="product-not-found"
+        hidden
+      >
+        <div class="container product-not-found-inner">
+          <svg
+            class="product-not-found-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="11" cy="11" r="7" />
+            <path d="M21 21l-4.3-4.3" />
+          </svg>
+          <p class="product-not-found-title">محصول یافت نشد</p>
+          <p class="product-not-found-text">
+            محصول مورد نظر در کاتالوگ موجود نیست یا حذف شده است. می‌توانید
+            به فهرست کامل محصولات بازگردید.
+          </p>
+          <a href="products.html" class="btn btn-primary">
+            بازگشت به محصولات
+          </a>
+        </div>
+      </section>
+
+      <!-- ============ محتوای اصلی محصول ============
+           تمام مقادیر داخل این بخش به‌صورت پویا با
+           js/pages/product-detail/product-detail.js پر می‌شوند.
+           DJANGO HAND-OFF: در نسخهٔ نهایی این IDها با {{ product.* }}
+           جایگزین و اسکریپت رندر کلاینتی حذف می‌شود. -->
+      <div id="product-detail-root" hidden>
+        <!-- ---------- بخش اول: تصویر + خلاصهٔ محصول ---------- -->
+        <section class="product-summary">
+          <div class="container product-summary-inner">
+            <!-- تصویر اصلی + گالری تصاویر بیشتر -->
+            <div class="product-media reveal">
+              <div class="product-media-frame">
+                <img
+                  id="product-main-image"
+                  class="product-main-image"
+                  src=""
+                  alt=""
+                  hidden
+                  decoding="async"
+                />
+                <svg
+                  id="product-media-placeholder"
+                  class="product-media-placeholder"
+                  viewBox="0 0 64 64"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <rect
+                    x="14"
+                    y="14"
+                    width="36"
+                    height="36"
+                    rx="4"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                  />
+                  <path
+                    d="M14 40l10-10 8 8 10-12 12 14"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <circle cx="24" cy="24" r="3" stroke="currentColor" stroke-width="2.2" />
+                </svg>
+              </div>
+
+              <!-- تصاویر بیشتر (در صورت وجود) -->
+              <div
+                class="product-gallery"
+                id="product-gallery"
+                hidden
+                aria-label="تصاویر بیشتر محصول"
+              ></div>
+            </div>
+
+            <!-- اطلاعات کلی -->
+            <div class="product-info reveal" style="--reveal-delay: 0.1s">
+              <span class="product-info-category" id="product-category"></span>
+              <h1 class="product-info-title" id="product-title"></h1>
+              <span class="product-info-code" id="product-code"></span>
+              <p class="product-info-desc" id="product-short-description"></p>
+
+              <div class="product-info-actions">
+                <a
+                  href="#product-datasheet"
+                  id="product-download-btn"
+                  class="btn btn-primary"
+                  hidden
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 3v12m0 0-5-5m5 5 5-5" />
+                    <path d="M4 19h16" />
+                  </svg>
+                  دانلود کاتالوگ (PDF)
+                </a>
+                <a href="products.html" class="btn btn-secondary">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M10 19 3 12l7-7M3 12h18" />
+                  </svg>
+                  بازگشت به محصولات
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ---------- بخش دوم: مشخصات فنی (جدول) ---------- -->
+        <section class="product-specs" id="product-specs-section">
+          <div class="container">
+            <div class="product-section-head reveal">
+              <p class="product-section-eyebrow">مشخصات فنی</p>
+              <h2 class="product-section-title">جدول مشخصات محصول</h2>
+            </div>
+
+            <div class="product-specs-table-wrap reveal" style="--reveal-delay: 0.08s">
+              <table class="product-specs-table" id="product-specs-table">
+                <tbody id="product-specs-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ---------- بخش سوم: پیش‌نمایش کاتالوگ PDF (در صورت وجود) ---------- -->
+        <section
+          class="product-datasheet"
+          id="product-datasheet"
+          hidden
+        >
+          <div class="container">
+            <div class="product-section-head reveal">
+              <p class="product-section-eyebrow">دیتاشیت فنی</p>
+              <h2 class="product-section-title">پیش‌نمایش کاتالوگ PDF</h2>
+            </div>
+
+            <div class="product-datasheet-frame reveal" style="--reveal-delay: 0.08s">
+              <iframe
+                id="product-datasheet-iframe"
+                class="product-datasheet-iframe"
+                title="پیش‌نمایش کاتالوگ PDF محصول"
+                loading="lazy"
+              ></iframe>
+            </div>
+
+            <a
+              id="product-datasheet-download"
+              class="btn btn-secondary product-datasheet-download-btn"
+              download
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M12 3v12m0 0-5-5m5 5 5-5" />
+                <path d="M4 19h16" />
+              </svg>
+              دانلود فایل PDF کاتالوگ
+            </a>
+          </div>
+        </section>
+
+        <!-- ---------- بخش چهارم: توضیحات کامل محصول ---------- -->
+        <section class="product-description" id="product-description-section">
+          <div class="container">
+            <div class="product-section-head reveal">
+              <p class="product-section-eyebrow">دربارهٔ محصول</p>
+              <h2 class="product-section-title">توضیحات کامل</h2>
+            </div>
+            <p
+              class="product-description-text reveal"
+              id="product-description"
+              style="--reveal-delay: 0.08s"
+            ></p>
+          </div>
+        </section>
+
+        <!-- ---------- بخش پنجم: تماس / درخواست اطلاعات ---------- -->
+        <section class="product-inquiry">
+          <div class="container product-inquiry-inner reveal">
+            <div class="product-inquiry-text">
+              <h2 class="product-inquiry-title">
+                درخواست اطلاعات فنی یا استعلام قیمت
+              </h2>
+              <p class="product-inquiry-desc">
+                برای دریافت مشخصات فنی تکمیلی، دیتاشیت یا استعلام قیمت این
+                محصول، با کارشناسان فروش مانیرو در تماس باشید.
+              </p>
+            </div>
+            <div class="product-inquiry-actions">
+              <a href="contact.html" class="btn btn-primary">
+                تماس با ما / ارسال درخواست
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ============ فوتر ============ -->
+    <footer class="site-footer">
+      <div class="footer-inner container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a
+              href="../index.html"
+              class="brand footer-logo"
+              aria-label="مانیرو — صفحه اصلی"
+            >
+              <img
+                src="../assets/images/logo/logo.png"
+                alt="مانیرو پاسارگاد"
+                class="brand-logo"
+                width="34"
+                height="35"
+                decoding="async"
+              />
+              <span class="brand-name">مانیرو</span>
+            </a>
+            <p class="footer-text">
+                مانیرو در زمینه تهیه کلیه تجهیزات و اجرای خطوط انتقال نیرو و پست های فشار قوی فعالیت می کند.
+            </p>
+
+            <div class="footer-social">
+              <a href="#" class="social-link" aria-label="تلگرام">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M21 4 2.5 11.5 9 13.5m12-9.5L16 20l-7-6.5m12-9.5L9 13.5m0 0v6.5"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="اینستاگرام">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1" />
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="لینکدین">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-13h4v1.3A5.98 5.98 0 0 1 16 8Z"
+                  />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="واتساپ">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M4 20l1.4-4.2A8 8 0 1 1 9 18.6L4 20Z" />
+                  <path d="M9 10c0 2.5 2.5 5 5 5" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3 class="footer-heading">لینک‌های سریع</h3>
+            <nav class="footer-nav" aria-label="لینک‌های سریع">
+              <a href="../index.html" class="footer-link">خانه</a>
+              <a href="about.html" class="footer-link">درباره ما</a>
+              <a href="services.html" class="footer-link">خدمات</a>
+              <a href="products.html" class="footer-link">محصولات</a>
+              <a href="contact.html" class="footer-link">تماس با ما</a>
+            </nav>
+          </div>
+
+          <div class="footer-contact">
+            <h3 class="footer-heading">تماس با ما</h3>
+            <ul class="footer-contact-list">
+              <li>
+                <img
+                  src="../assets/icons/stockholm/48x48/Map/Marker%231.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <span
+                  >تهران، خیابان نمونه، پلاک ۰۰، واحد ۰۰</span
+                >
+              </li>
+              <li>
+                <img
+                  src="../assets/icons/stockholm/48x48/Home/Mailbox.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <span>کدپستی: ۰۰۰۰۰۰۰۰۰۰</span>
+              </li>
+              <li>
+                <img
+                  src="../assets/icons/stockholm/48x48/Communication/Call.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <span dir="ltr">021-00000000</span>
+              </li>
+              <li>
+                <img
+                  src="../assets/icons/stockholm/48x48/Devices/Printer.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <span dir="ltr">021-00000001 :فکس</span>
+              </li>
+              <li>
+                <img
+                  src="../assets/icons/stockholm/48x48/Communication/Mail.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <span dir="ltr">info@example.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            © ۲۰۲۶ مانیرو انجینیرینگ | تمامی حقوق این وب‌سایت محفوظ است
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ============ دکمه بازگشت به بالا ============ -->
+    <button
+      type="button"
+      id="backToTop"
+      class="back-to-top"
+      aria-label="بازگشت به بالای صفحه"
+    >
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M12 19V5" />
+        <path d="M5 12l7-7 7 7" />
+      </svg>
+    </button>
+    <script src="../js/base/smooth-scroll.js"></script>
+    <script src="../js/base/back-to-top.js"></script>
+    <script src="../js/base/menu.js"></script>
+    <script src="../js/base/scroll-reveal.js"></script>
+    <script src="../js/pages/product-detail/product-detail.js"></script>
+  </body>
+</html>
