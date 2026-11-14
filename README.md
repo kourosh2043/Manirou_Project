@@ -7,7 +7,7 @@ This repository is a demo of the production site. The product data, the five ser
 ## Quick start
 
 ```bash
-cd manirou-demo
+cd Manirou_Project
 python -m http.server 8000
 ```
 
